@@ -1,28 +1,29 @@
 name: Publish
 
 on:
-workflow_dispatch:
-push:
-branches:
-- master
+  workflow_dispatch:
+  push:
+    branches:
+      - master
 
 jobs:
-publish:
-runs-on: ubuntu-latest
+  publish:
+    runs-on: ubuntu-latest
 
-steps:
-- uses: actions/checkout@v3
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
 
-- name: Setup .Net
- uses: actions/setup-dotnet@v3
- with:
- dotnet-version: '8.0.x'
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
 
- -name: Restore
-  run: dotnet restore ./Login .Regester.sln
+      - name: Restore
+        run: dotnet restore ./Login_Register.sln
 
-  -name: Build
-   run: dotnet build ./Login .Regester.sln --configuration Release
+      - name: Build
+        run: dotnet build ./Login_Register.sln --configuration Release
 
-   -name: Publish
-    run: dotnet publish ./Login .Regester.sln  --configuration Release --no build
+      - name: Publish
+        run: dotnet publish ./Login_Register.sln --configuration Release -o build

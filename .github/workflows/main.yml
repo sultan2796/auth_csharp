@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   publish:
@@ -20,10 +20,10 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Restore
-        run: dotnet restore ./Login_Register.sln
+        run: dotnet restore ./Login_Regester.sln
 
       - name: Build
-        run: dotnet build ./Login_Register.sln --configuration Release
+        run: dotnet build ./Login_Regester.sln --configuration Release
 
       - name: Publish
-        run: dotnet publish ./Login_Register.sln --configuration Release -o build
+        run: dotnet publish ./Login_Regester.sln --configuration Release -o build

@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Login .Regester</name>
+    </assembly>
+    <members>
+        <member name="T:Login_.Regester.Controllers.AuthController">
+            <summary>
+            İstifadəçi autentifikasiya və qeydiyyat əməliyyatları üçün controller.
+            </summary>
+        </member>
+        <member name="M:Login_.Regester.Controllers.AuthController.#ctor(Login_.Regester.Data.AppDbContext,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            AuthController-in yeni instance-ını yaradır.
+            </summary>
+            <param name="context">Verilənlər bazası konteksti.</param>
+            <param name="configuration">Konfiqurasiya.</param>
+        </member>
+        <member name="M:Login_.Regester.Controllers.AuthController.Register(Login_.Regester.Models.AppUser)">
+            <summary>
+            Yeni istifadəçi qeydiyyatı.
+            </summary>
+            <param name="user">Qeydiyyat üçün istifadəçi məlumatları.</param>
+            <returns>Qeydiyyat nəticəsi.</returns>
+        </member>
+        <member name="M:Login_.Regester.Controllers.AuthController.Login(Login_.Regester.Models.AppUser)">
+            <summary>
+            İstifadəçi girişi və JWT token əldə edilməsi.
+            </summary>
+            <param name="user">Giriş üçün istifadəçi məlumatları.</param>
+            <returns>JWT token və ya xəta mesajı.</returns>
+        </member>
+        <member name="M:Login_.Regester.Controllers.AuthController.Profile">
+            <summary>
+            Hazırda login olmuş istifadəçinin profil məlumatları.
+            </summary>
+            <returns>İstifadəçi ID-si və adı.</returns>
+        </member>
+        <member name="T:Login_.Regester.Controllers.WeatherForecastController">
+            <summary>
+            Hava proqnozu məlumatları üçün controller.
+            </summary>
+        </member>
+        <member name="M:Login_.Regester.Controllers.WeatherForecastController.#ctor(Microsoft.Extensions.Logging.ILogger{Login_.Regester.Controllers.WeatherForecastController})">
+            <summary>
+            WeatherForecastController-in yeni instance-ını yaradır.
+            </summary>
+            <param name="logger">Logger instance-ı.</param>
+        </member>
+        <member name="M:Login_.Regester.Controllers.WeatherForecastController.Get">
+            <summary>
+            Hava proqnozu məlumatlarını qaytarır.
+            </summary>
+            <returns>Hava proqnozu siyahısı.</returns>
+        </member>
+        <member name="T:Login_.Regester.Data.AppDbContext">
+            <summary>
+            Entity Framework Core verilənlər bazası konteksti.
+            </summary>
+        </member>
+        <member name="M:Login_.Regester.Data.AppDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{Login_.Regester.Data.AppDbContext})">
+            <summary>
+            AppDbContext-in yeni instance-ını yaradır.
+            </summary>
+            <param name="options">DbContext konfiqurasiya seçimləri.</param>
+        </member>
+        <member name="P:Login_.Regester.Data.AppDbContext.Users">
+            <summary>
+            İstifadəçilər cədvəli.
+            </summary>
+        </member>
+        <member name="T:Login_.Regester.Models.AppUser">
+            <summary>
+            İstifadəçi modelini təmsil edir.
+            </summary>
+        </member>
+        <member name="P:Login_.Regester.Models.AppUser.Id">
+            <summary>
+            İstifadəçi ID-si
+            </summary>
+        </member>
+        <member name="P:Login_.Regester.Models.AppUser.Username">
+            <summary>
+            İstifadəçi adı
+            </summary>
+        </member>
+        <member name="P:Login_.Regester.Models.AppUser.Password">
+            <summary>
+            İstifadəçi şifrəsi (hash-lənmiş)
+            </summary>
+        </member>
+        <member name="T:Login_.Regester.WeatherForecast">
+            <summary>
+            Hava proqnozu məlumatlarını təmsil edir.
+            </summary>
+        </member>
+        <member name="P:Login_.Regester.WeatherForecast.Date">
+            <summary>
+            Proqnoz tarixi.
+            </summary>
+        </member>
+        <member name="P:Login_.Regester.WeatherForecast.TemperatureC">
+            <summary>
+            Temperatur Selsi dərəcəsində.
+            </summary>
+        </member>
+        <member name="P:Login_.Regester.WeatherForecast.TemperatureF">
+            <summary>
+            Temperatur Farenheit dərəcəsində.
+            </summary>
+        </member>
+        <member name="P:Login_.Regester.WeatherForecast.Summary">
+            <summary>
+            Hava vəziyyətinin təsviri.
+            </summary>
+        </member>
+    </members>
+</doc>
